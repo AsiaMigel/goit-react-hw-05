@@ -1,0 +1,39 @@
+.movieDetailsTitle{
+    color: black;
+    font-size: 18px;
+    text-align: left;
+}
+
+.titleMovie{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.addInfoMovie{
+    text-align: left;
+    border: 3px solid blueviolet;
+}
+
+.addTitleMovie{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.listMovie{
+    font-size: 18px;
+    color: blueviolet;
+}
+
+.backBtn{
+    background-color: purple;
+    color: whitesmoke;
+    font-size: 24px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    width: 90px;
+    cursor: pointer;
+    margin: auto;
+}

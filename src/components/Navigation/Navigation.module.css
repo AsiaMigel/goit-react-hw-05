@@ -1,0 +1,13 @@
+.link{
+    text-decoration: none;
+    color: black;
+    padding-left: 20px;
+    font-size: 26px;
+    color: rgb(158, 5, 158);
+}
+
+.isActive{
+    text-decoration: underline;
+    color: red;
+}
+
