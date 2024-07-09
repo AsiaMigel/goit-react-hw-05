@@ -3,6 +3,8 @@ import { Link, Outlet, useParams, useLocation } from "react-router-dom";
 import axios from "axios";
 import Loader from "../../Loader/Loader";
 import css from "./MovieDetailsPage.module.css";
+
+
 const baseURL = "https://api.themoviedb.org/3";
 const API_TOKEN =
   "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NGM5ZWU1MzE0OGE1N2M0NGE1YTRjMjlkOTBmMjEwZCIsIm5iZiI6MTcyMDQzODkzMS45MTU2NzQsInN1YiI6IjY2OGJhMmRmNTBhZTc1NjhiNTIzYzdmNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.N14Apw7MS_DDP2oSPh7jF4PCnnmDMTQP2bbswc9v_Vk"; 
@@ -27,6 +29,7 @@ const MovieDetailsPage = () => {
   const [error, setError] = useState(null);
   const containerRef = useRef(null);
   const backLinkHref = location.state?.from ?? "/movies";
+  
   useEffect(() => {
     const getMovieDetails = async () => {
       try {
@@ -46,6 +49,7 @@ const MovieDetailsPage = () => {
     }
   }, [movie]);
   if (error) return <p>Error loading movie details: {error.message}</p>;
+  
   return (
     <div ref={containerRef}>
       {loading && <Loader />}

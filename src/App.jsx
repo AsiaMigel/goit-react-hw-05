@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation";
 import { Suspense, lazy } from "react";
-import Loader from "./Loader/Loader";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const MoviesPage = lazy(() => import("./pages/MoviesPage/MoviesPage"));
@@ -18,8 +17,10 @@ const MovieReviews = lazy(() =>
 const App = () => {
   return (
     <div>
-      <Suspense fallback={<div>Loading</div>}>
+      <Suspense fallback={<div>Loading...</div>}>
         <Navigation />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
@@ -35,11 +36,8 @@ const App = () => {
 };
 export default App;
 
-
-
-// Ключ API 
+// Ключ API
 // 54c9ee53148a57c44a5a4c29d90f210d
-
 
 // Токен
 // eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NGM5ZWU1MzE0OGE1N2M0NGE1YTRjMjlkOTBmMjEwZCIsIm5iZiI6MTcyMDQ0NzQzNi45OTkwMjcsInN1YiI6IjY2OGJhMmRmNTBhZTc1NjhiNTIzYzdmNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0TJKl_SGFOZ2Do8OXcORBFJG2FlWgMDO0MZnpqwXvto
