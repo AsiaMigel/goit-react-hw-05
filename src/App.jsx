@@ -17,16 +17,14 @@ const MovieReviews = lazy(() =>
 const App = () => {
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Navigation />
-      </Suspense>
+      <Navigation />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
           <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
-            <Route path="Cast" element={<MovieCast />} />
-            <Route path="Reviews" element={<MovieReviews />} />
+            <Route path="cast" element={<MovieCast />} />
+            <Route path="reviews" element={<MovieReviews />} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
